@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Campaigns\CampaignController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/campaigns', [CampaignController::class, 'index']);
+Route::post('/campaigns', [CampaignController::class, 'store']);
+Route::get('/campaigns/{id}', [CampaignController::class, 'show']);
+Route::patch('/campaigns/{id}', [CampaignController::class, 'update']);
+Route::delete('/campaigns/{id}', [CampaignController::class, 'destroy']);
