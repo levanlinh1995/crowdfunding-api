@@ -31,6 +31,7 @@ class StoreCampaignAction
     public function __invoke(array $data): JsonResponse
     {
         DB::beginTransaction();
+        $data = $this->initialState($data);
 
         try {
             $campaign = $this->campaignRepository->create($data);
@@ -43,5 +44,15 @@ class StoreCampaignAction
             DB::rollBack();
             Log::error('Cannot insert data into the Campaign table', [$e->getMessage()]);
         }
+    }
+
+    private function initialState(array $data):array {
+        return [
+            'title' => $data['title'],
+            'description' => $data['description'],
+            'short_description' => $data['shortDescription'],
+            'status' => $data['status'],
+            'image_url' => $data['imageUrl']
+        ];
     }
 }

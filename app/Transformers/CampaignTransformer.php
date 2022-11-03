@@ -33,8 +33,9 @@ class CampaignTransformer extends Transformer
             'id'                => (int) $campaign->id,
             'title'             => $campaign->title,
             'description'       => $campaign->description,
-            'short_description' => $campaign->short_description,
-            'status'            => $campaign->status
+            'shortDescription' => $campaign->short_description,
+            'status'            => $campaign->status,
+            'imageUrl'         => $campaign->image_url
         ];
     }
 }

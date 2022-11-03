@@ -19,6 +19,7 @@ class CreateCampaignsTable extends Migration
             $table->text('description');
             $table->string('short_description');
             $table->tinyInteger('status');
+            $table->string('image_url');
             $table->timestamps();
         });
     }

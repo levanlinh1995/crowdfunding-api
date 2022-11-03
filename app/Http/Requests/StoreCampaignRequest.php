@@ -26,8 +26,9 @@ class StoreCampaignRequest extends FormRequest
         return [
             'title' => ['required'],
             'description' => ['required'],
-            'short_description' => ['required'],
-            'status' => ['required']
+            'shortDescription' => ['required'],
+            'status' => ['required'],
+            'imageUrl' => ['required']
         ];
     }
 

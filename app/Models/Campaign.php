@@ -17,6 +17,7 @@ class Campaign extends Model
         'title',
         'description',
         'short_description',
-        'status'
+        'status',
+        'image_url'
     ];
 }

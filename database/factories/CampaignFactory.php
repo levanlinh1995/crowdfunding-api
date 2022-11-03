@@ -24,7 +24,8 @@ class CampaignFactory extends Factory
             'title' => $this->faker->sentence(6, true),
             'description' => $this->faker->text(200),
             'short_description' => $this->faker->text(100),
-            'status' => $this->faker->randomDigitNotNull
+            'status' => $this->faker->randomDigitNotNull,
+            'image_url' => 'https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png'
         ];
     }
 }
