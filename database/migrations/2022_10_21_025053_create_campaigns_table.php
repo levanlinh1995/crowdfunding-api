@@ -17,7 +17,7 @@ class CreateCampaignsTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->string('short_description');
+            $table->text('short_description');
             $table->tinyInteger('status');
             $table->string('image_url');
             $table->timestamps();
